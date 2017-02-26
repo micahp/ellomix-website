@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="ellomix.css">
+	<title>Ellomix</title>
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="container content-container space-background" id="download">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4 center-vertical center-text">
+				<h1 class="logo">ell<img src="ellomixO.png">mix</h1>
+				<div class="definition">
+					<h1>əˈlōmiks<span class="garamond"><i> n.</i></span></h1>
+				</div>
+				<h4 class="margin-top">ellomix is the ultimate Music Social Media App.</h4>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container content-container feature" id="features">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4 feature-title">
+				<h2>The Features</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1">
+				<div class="feature-item">
+					<h4>Timeline</h4>
+					<p class="feature-desc">Users will have the ability to share music content for friends to view, like, repost, comment, and more. Easy way to stay updated with the hottest music your friends, DJ’s, and favorite artists are listening to.</p>
+				</div>
+				<div class="feature-item">
+					<h4>Integration</h4>
+					<p class="feature-desc">Users will have the ability to sync other music app platforms. This will enable users to have once place save all of their music history and will be used to recommend new music.</p>
+				</div>
+			</div>
+			<div class="col-md-4 feature-item app-demo">
+				<!-- <img src="Adult Hand 2 - iPhone 6s blacknwhite.png" width="200" height="auto"> -->
+				<img src="iphone7timeline.png" width="300" height="auto">
+			</div>
+			<div class="col-md-3">
+				<div class="feature-item">
+					<h4>Messaging</h4>
+					<p class="feature-desc">Users will have the ability to message privately to a single user or group chat. User can share music and write messages in this function.</p>
+				</div>
+				<div class="feature-item">
+					<h4>Playlists</h4>
+					<p class="feature-desc">Users will be able to create playlists in addition to just single songs with friends.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container content-container grad" id="sign-up">
+		<div class="row vertical-padding">
+			<div class="col-md-4 col-md-offset-5 center-vertical">			
+
+				<form id="form" action="https://Ellomix.us15.list-manage.com/subscribe/post?u=cfbd431106e0dfdc815808a0d&amp;id=b71aec0881" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					
+				<div class="mc-field-group">
+					<input type="email" value="" name="EMAIL" class="required email email-input" id="mce-EMAIL" placeholder="ENTER EMAIL FOR UPDATES">
+				</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div> 
+				</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="playlist">
+		<div class="" style="width:1px;height:1px;overflow:hidden"><iframe width="300" height="300" src="https://www.youtube.com/embed/?list=PLfGwfImI4YjIelkGjGc9vdw0GkaRWKtVE&amp;index=0&amp;autoplay=1&amp;loop=0" frameborder="0" allowfullscreen></iframe></div>
+	</div> -->
+
+	<!-- SCRIPTS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script>
+		// $(".container").each(function() {
+		// 	let color = "#" + Math.floor(Math.random()*16777215).toString(16);
+		// 	$(this).css("background-color", color);
+		// });
+
+		$("#form").on('keypress', function(event) {
+			if (event.keyCode == 13) {
+				var url = "https://Ellomix.us15.list-manage.com/subscribe/post-json?u=cfbd431106e0dfdc815808a0d&amp;id=b71aec0881";
+				$.ajax({
+				  type: "POST",
+				  url: url,
+				  data: $(this).serialize(),
+				  dataType: "json",
+				  success: function(data) {
+				  	console.log("success");
+				  }
+				});
+				}
+		});
+	</script>
+</body>
