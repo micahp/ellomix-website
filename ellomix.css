@@ -126,6 +126,11 @@ body {
 	margin-top: 15px;
 }
 
+.padding-horizontal {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
 .space-background {
 	background-image: url(space.gif);
     background-repeat: no-repeat;
