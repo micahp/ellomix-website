@@ -1,7 +1,23 @@
-body {
-	padding: 0;
-	margin: 0;
+html,body
+{
 	color: #ffffff;
+	font-family: AkzidenzGrotesk;
+	font-size: 15px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    overflow-y:auto;
+    width: 100%;
+}
+
+@font-face {
+	font-family: AkzidenzGroteskBold;
+	src: url("../Akzidenz-Grotesk-BQ-Bold_2810.ttf");
+}
+
+@font-face {
+	font-family: AkzidenzGroteskMedium;
+	src: url("../Akzidenz-Grotesk-BQ-Medium_2839.ttf");
 }
 
 @font-face {
@@ -49,6 +65,8 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
 }
 
 .center-text {
@@ -59,12 +77,16 @@ body {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
 }
 
 .center-horizontal {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
 }
 
 .definition h1 {
@@ -134,9 +156,20 @@ body {
 	padding-top: 50px;
 }
 
+.logo-column h1 {
+	font-family: AkzidenzGrotesk;
+	font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	font-family: AkzidenzGroteskMedium;
+}
+
 .feature-title {
 	padding-top: 20px;
 	text-align: center;
+	font-weight: bold;
 }
 
 .logo {
@@ -146,6 +179,10 @@ body {
 
 .logo-column {
 	min-width: 500px;
+}
+
+.logo-column h1 {
+	font-weight: normal;
 }
 
 .margin-top {
@@ -159,6 +196,16 @@ body {
 .padding-horizontal {
 	padding-left: 50px;
 	padding-right: 50px;
+}
+
+.sound-toggle {
+	margin: 10px 10px 0 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .space-background {
@@ -184,8 +231,9 @@ body {
 	margin-left: -12px;
 	border-left: 3px solid #fff;
 	border-bottom: 3px solid #fff;
-	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
 	-webkit-animation: sdb 2s infinite;
 	animation: sdb 2s infinite;
 	box-sizing: border-box;
@@ -235,19 +283,24 @@ body {
 	div.feature-items:first-child {
 		margin-top: 0;
 	}
+
+	.email-input {
+		font-weight: normal
+	}
 }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
  }
 @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
 
 input {
+	opacity: .7;
 	text-align: center;
-	width: 200px;
+	width: 220px;
 }
 
 input:focus {
 	outline: none;
-	color: #fff;
+	opacity: 1;
 }
 
 input::-webkit-input-placeholder {
