@@ -41,6 +41,8 @@ html,body
 .app-demo {
 	text-align: center;
 	padding-bottom: 50px;
+    width: 100%;
+
 }
 
 .appstore-icon {
@@ -152,7 +154,7 @@ html,body
 	padding-left: 50px;
 }
 
-.feature-item {
+.feature-item-padding-top {
 	padding-top: 50px;
 }
 
@@ -168,6 +170,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .feature-title {
 	padding-top: 20px;
+    padding-bottom: 50px;
 	text-align: center;
 	font-weight: bold;
 }
@@ -214,6 +217,19 @@ h1,h2,h3,h4,h5,h6 {
     background-size: cover;
 }
 
+.screenshot {
+	background-image: url('../images/iphone7timeline.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-background-size: 300px 607px;
+    background-size: 300px 607px;
+    min-height: 607px;
+    margin: auto;
+    min-width: 300px;
+}
+
 .scroll-button {
 	box-sizing: border-box;
 	display: inline-block;
@@ -224,6 +240,7 @@ h1,h2,h3,h4,h5,h6 {
 	position: relative;
 	width: 50px;
 }
+
 .scroll-button span {
 	position: absolute;
 	width: 24px;
