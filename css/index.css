@@ -59,6 +59,8 @@ html,body
 .container {
 	width: 100%;
 	min-height: 100vh;
+	padding-left: 0;
+	padding-right: 0;
 	position: relative;
 }
 
@@ -146,6 +148,11 @@ html,body
 	background-color: #000;
 }
 
+.feature-items {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
 .feature-desc {
 	min-height: 100px;
 }
@@ -154,8 +161,8 @@ html,body
 	padding-left: 50px;
 }
 
-.feature-item-padding-top {
-	padding-top: 50px;
+.feature-item-margin-top {
+	margin-top: 50px;
 }
 
 .logo-column h1 {
@@ -254,6 +261,15 @@ h1,h2,h3,h4,h5,h6 {
 	-webkit-animation: sdb 2s infinite;
 	animation: sdb 2s infinite;
 	box-sizing: border-box;
+}
+
+.ut-skyline {
+	position: relative;
+}
+
+.ut-skyline > img {
+	position: absolute;
+	bottom: 0;
 }
 @-webkit-keyframes sdb {
 	0% {
