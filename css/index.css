@@ -154,7 +154,7 @@ html,body
 }
 
 .feature-desc {
-	min-height: 100px;
+	margin-bottom: 50px;
 }
 
 .first-icon {
@@ -226,7 +226,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .screenshot {
 	background-image: url('../images/iphone7timeline.png');
-    background-position: center;
+    background-position: top center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -294,11 +294,17 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 
-
-@media (max-width: 768px) { 
-	.app-demo {
-		padding-bottom: 0;
+@media (max-width:  992px) {
+	.mobile-margin-top {
+		margin-top: 630px;
 	}
+
+	.feature-item-margin-top {
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 768px) {
 
 	.logo {
 		font-size: 80px !important;
