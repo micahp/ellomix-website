@@ -130,10 +130,10 @@ html,body
 
 .grad-vertical {
   background: var(--gradientLeft); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(var(--gradientLeft) , var(--gradientRight)); /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(var(--gradientLeft), var(--gradientRight) 100%); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(var(--gradientLeft), var(--gradientRight)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(var(--gradientLeft), var(--gradientRight)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(var(--gradientLeft) , var(--gradientRight)); /* Standard syntax */
+  background: linear-gradient(var(--gradientLeft), var(--gradientRight)); /* Standard syntax */
 }
 
 .grad2-vertical {
@@ -141,7 +141,7 @@ html,body
   background: -webkit-linear-gradient(var(--gradientLeft2) , var(--gradientRight2)); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(var(--gradientLeft2), var(--gradientRight2)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(var(--gradientLeft2), var(--gradientRight2)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(var(--gradientLeft2) , var(--gradientRight2)); /* Standard syntax */
+  background: linear-gradient(var(--gradientLeft2) 75px, var(--gradientRight2)); /* Standard syntax */
 }
 
 .feature {
@@ -261,6 +261,19 @@ h1,h2,h3,h4,h5,h6 {
 	-webkit-animation: sdb 2s infinite;
 	animation: sdb 2s infinite;
 	box-sizing: border-box;
+}
+
+.transparent-gradient {
+	width: 100%;
+	min-height: 100vh;
+	margin-left: 0;
+	/*background: linear-gradient(to bottom, rgba(0,0,0,0), var(--gradientLeft2));*/
+	background:
+		linear-gradient(to bottom,
+		rgba(0,0,0,0) 0,
+		rgba(0,0,0,0) 55%,
+		rgba(76,104,215,1) 95%
+	);
 }
 
 .ut-skyline {
