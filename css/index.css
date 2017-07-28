@@ -41,6 +41,8 @@ html,body
 .app-demo {
 	text-align: center;
 	padding-bottom: 50px;
+    width: 100%;
+
 }
 
 .appstore-icon {
@@ -57,6 +59,8 @@ html,body
 .container {
 	width: 100%;
 	min-height: 100vh;
+	padding-left: 0;
+	padding-right: 0;
 	position: relative;
 }
 
@@ -126,10 +130,10 @@ html,body
 
 .grad-vertical {
   background: var(--gradientLeft); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(var(--gradientLeft) , var(--gradientRight)); /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(var(--gradientLeft), var(--gradientRight) 100%); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(var(--gradientLeft), var(--gradientRight)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(var(--gradientLeft), var(--gradientRight)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(var(--gradientLeft) , var(--gradientRight)); /* Standard syntax */
+  background: linear-gradient(var(--gradientLeft), var(--gradientRight)); /* Standard syntax */
 }
 
 .grad2-vertical {
@@ -137,23 +141,28 @@ html,body
   background: -webkit-linear-gradient(var(--gradientLeft2) , var(--gradientRight2)); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(var(--gradientLeft2), var(--gradientRight2)); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(var(--gradientLeft2), var(--gradientRight2)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(var(--gradientLeft2) , var(--gradientRight2)); /* Standard syntax */
+  background: linear-gradient(var(--gradientLeft2) 75px, var(--gradientRight2)); /* Standard syntax */
 }
 
 .feature {
 	background-color: #000;
 }
 
+.feature-items {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
 .feature-desc {
-	min-height: 100px;
+	margin-bottom: 50px;
 }
 
 .first-icon {
 	padding-left: 50px;
 }
 
-.feature-item {
-	padding-top: 50px;
+.feature-item-margin-top {
+	margin-top: 50px;
 }
 
 .logo-column h1 {
@@ -168,6 +177,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .feature-title {
 	padding-top: 20px;
+    padding-bottom: 50px;
 	text-align: center;
 	font-weight: bold;
 }
@@ -218,6 +228,19 @@ h1,h2,h3,h4,h5,h6 {
     background-size: cover;
 }
 
+.screenshot {
+	background-image: url('../images/iphone7timeline.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-background-size: 300px 607px;
+    background-size: 300px 607px;
+    min-height: 607px;
+    margin: auto;
+    min-width: 300px;
+}
+
 .scroll-button {
 	box-sizing: border-box;
 	display: inline-block;
@@ -228,6 +251,7 @@ h1,h2,h3,h4,h5,h6 {
 	position: relative;
 	width: 50px;
 }
+
 .scroll-button span {
 	position: absolute;
 	width: 24px;
@@ -241,6 +265,28 @@ h1,h2,h3,h4,h5,h6 {
 	-webkit-animation: sdb 2s infinite;
 	animation: sdb 2s infinite;
 	box-sizing: border-box;
+}
+
+.transparent-gradient {
+	width: 100%;
+	min-height: 100vh;
+	margin-left: 0;
+	/*background: linear-gradient(to bottom, rgba(0,0,0,0), var(--gradientLeft2));*/
+	background:
+		linear-gradient(to bottom,
+		rgba(0,0,0,0) 0,
+		rgba(0,0,0,0) 55%,
+		rgba(76,104,215,1) 95%
+	);
+}
+
+.ut-skyline {
+	position: relative;
+}
+
+.ut-skyline > img {
+	position: absolute;
+	bottom: 0;
 }
 @-webkit-keyframes sdb {
 	0% {
@@ -265,11 +311,17 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 
-
-@media (max-width: 768px) { 
-	.app-demo {
-		padding-bottom: 0;
+@media (max-width:  992px) {
+	.mobile-margin-top {
+		margin-top: 630px;
 	}
+
+	.feature-item-margin-top {
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 768px) {
 
 	.logo {
 		font-size: 80px !important;
