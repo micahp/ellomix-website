@@ -193,6 +193,10 @@ h1,h2,h3,h4,h5,h6 {
 	margin-top: -3px;
 }
 
+.no-display {
+    display: none;
+}
+
 .padding-horizontal {
 	padding-left: 50px;
 	padding-right: 50px;
