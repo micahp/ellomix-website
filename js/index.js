@@ -48,6 +48,15 @@ $(function() {
 		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
 	});
 
+	// $('.feature-item').hover(function() {
+	// 	var url = 'url(images/' + $(this).attr('data-screen') + '.png)';
+	// 	console.log(url);
+	// 	$('.screenshot').css('background-image', url);
+	// }, function() {
+	// 	var url = 'url(images/iphone7timeline.png)';
+     //    $('.screenshot').css('background-image', url);
+	// });
+
 	// $("#form").on('keypress', function(e) {
 	// 	if (event.keyCode == 13) {
 	// 		var url = "https://Ellomix.us15.list-manage.com/subscribe/post-json?u=cfbd431106e0dfdc815808a0d&amp;id=b71aec0881";
