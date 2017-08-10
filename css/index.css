@@ -108,6 +108,14 @@ html,body
 	text-transform: uppercase;
 }
 
+.email-parent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
 .garamond {
 	font-family: 'Cormorant Garamond', serif;
 }
@@ -163,6 +171,10 @@ html,body
 
 .feature-item-margin-top {
 	margin-top: 50px;
+}
+
+.form-div {
+	z-index: 10;
 }
 
 .logo-column h1 {
