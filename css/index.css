@@ -28,10 +28,11 @@ html,body
 :root {
 	--placeholderLight: #ffffff;
 	--placeholderDefault: #eaeaea;
-	--gradientLeft: #8a3ab9;
-	--gradientRight: #bc2a8d;
-	--gradientLeft2: #4c68d7;
-	--gradientRight2: #8a3ab9;
+
+	--gradientTop: #4c68d7;
+	--gradientTop2: #6753c9;
+	--gradientTop3: #7a3ab9;
+	--gradientBottom: #bc2a8d;
 }
 
 .akzidenz {
@@ -120,36 +121,28 @@ html,body
 	font-family: 'Cormorant Garamond', serif;
 }
 
-.grad {
-  background: var(--gradientLeft); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, var(--gradientLeft) , var(--gradientRight)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, var(--gradientLeft), var(--gradientRight)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, var(--gradientLeft), var(--gradientRight)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, var(--gradientLeft) , var(--gradientRight)); /* Standard syntax */
-}
-
-.grad2 {
-  background: var(--gradientLeft2); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, var(--gradientLeft2) , var(--gradientRight2)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, var(--gradientLeft2), var(--gradientRight2)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, var(--gradientLeft2), var(--gradientRight2)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, var(--gradientLeft2) , var(--gradientRight2)); /* Standard syntax */
-}
-
 .grad-vertical {
-  background: var(--gradientLeft); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(var(--gradientLeft), var(--gradientRight) 100%); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(var(--gradientLeft), var(--gradientRight)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(var(--gradientLeft), var(--gradientRight)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(var(--gradientLeft), var(--gradientRight)); /* Standard syntax */
+  background: var(--gradientTop); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(var(--gradientTop), var(--gradientTop2) 100%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(var(--gradientTop), var(--gradientTop2)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(var(--gradientTop), var(--gradientTop2)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(var(--gradientTop), var(--gradientTop2)); /* Standard syntax */
 }
 
 .grad2-vertical {
-  background: var(--gradientLeft2); /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(var(--gradientLeft2) , var(--gradientRight2)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(var(--gradientLeft2), var(--gradientRight2)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(var(--gradientLeft2), var(--gradientRight2)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(var(--gradientLeft2) 75px, var(--gradientRight2)); /* Standard syntax */
+  background: var(--gradientTop2); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(var(--gradientTop2) , var(--gradientTop3)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(var(--gradientTop2), var(--gradientTop3)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(var(--gradientTop2), var(--gradientTop3)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(var(--gradientTop2) 75px, var(--gradientTop3)); /* Standard syntax */
+}
+
+.grad3-vertical {
+  background: var(--gradientTop3); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(var(--gradientTop3) , var(--gradientBottom)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(var(--gradientTop3), var(--gradientBottom)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(var(--gradientTop3), var(--gradientBottom)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(var(--gradientTop3) 75px, var(--gradientBottom)); /* Standard syntax */
 }
 
 .feature {
@@ -171,6 +164,21 @@ html,body
 
 .feature-item-margin-top {
 	margin-top: 50px;
+}
+
+.flex-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+/*	flex-flow: column wrap;
+*/	align-content: space-between;
+   -webkit-align-content: stretch;
+	width: 100%;
+}
+
+.flex-item {
+	width: 300px;
+	height: 600px;
 }
 
 .form-div {
@@ -248,7 +256,7 @@ h1,h2,h3,h4,h5,h6 {
     background-size: cover;
     -webkit-background-size: 300px 607px;
     background-size: 300px 607px;
-    min-height: 607px;
+    min-height: 650px;
     margin: auto;
     min-width: 300px;
 }
@@ -279,6 +287,12 @@ h1,h2,h3,h4,h5,h6 {
 	box-sizing: border-box;
 }
 
+.social-feed {
+	text-align: center;
+	margin-bottom: 50px;
+	z-index: 20;
+}
+
 .transparent-gradient {
 	width: 100%;
 	min-height: 100vh;
@@ -287,8 +301,7 @@ h1,h2,h3,h4,h5,h6 {
 	background:
 		linear-gradient(to bottom,
 		rgba(0,0,0,0) 0,
-		rgba(0,0,0,0) 55%,
-		rgba(76,104,215,1) 95%
+		var(--gradientTop) 95%
 	);
 }
 
