@@ -1,6 +1,7 @@
 $(function() {
-	var allowAudioString = 'allow audio';
-	var playAudioString = 'play music';
+	const allowAudioString = 'allow audio';
+	const playAudioString = 'play music';
+	let appDemoImage;
 
 	// Try to play audio
 	var playPromise = $('audio')[0].play();
@@ -27,6 +28,7 @@ $(function() {
 		}
 	}
 
+	// Toggle sound on/off
 	$('#sound-toggle').click(function(e) {
 		var firstChild = $(this).children()[0];
 		//console.log(firstChild);
@@ -43,37 +45,33 @@ $(function() {
 		$('audio').prop('muted', function(_, muted) {return !muted;});
 	});
 
+	// Scroll 100 pixels when scroll down arrow is clicked
 	$('.scroll-button').on('click', function(e) {
 		e.preventDefault();
 		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
 	});
 
-	// $('.feature-item').hover(function() {
-	// 	var url = 'url(images/' + $(this).attr('data-screen') + '.png)';
-	// 	console.log(url);
-	// 	$('.screenshot').css('background-image', url);
-	// }, function() {
-	// 	var url = 'url(images/iphone7timeline.png)';
-     //    $('.screenshot').css('background-image', url);
-	// });
+	// Changes app screenshot based on hovered element
+	$('.feature-item').hover(function(e) {
+		console.log(e.target)
+		let url = 'url("images/' + $(this).attr('data-screen') + '.png")';
+		console.log(url);
+		
 
-	// $("#form").on('keypress', function(e) {
-	// 	if (event.keyCode == 13) {
-	// 		var url = "https://Ellomix.us15.list-manage.com/subscribe/post-json?u=cfbd431106e0dfdc815808a0d&amp;id=b71aec0881";
-	// 		$.ajax({
-	// 		  type: "POST",
-	// 		  url: url,
-	// 		  data: $(this).serialize(),
-	// 		  dataType: "json",
-	// 		  success: function(result) {
-	// 		  	console.log(result);
-	// 		  	$('#form-div').html("<p>THANK YOU</p>");
-	// 		  },
-	// 		  error: function(xhr, status, error) {
-	// 		  	console.log(error);
-	// 		  	$('#form-div').html("<p>SOMETHING WENT WRONG</p>");
-	// 		  }
-	// 		});
-	// 	}
-	// });
+
+		$(this).css('background-color', 'rgba(0, 0, 0, .25')
+	}, function() {
+		let url = 'url(../images/iPhone 8 White.png)';
+        $('.screenshot').css('background-image', url);
+        $(this).css('background-color', 'transparent')
+	});
 });
+
+// Creates and returns an image DOM element with the given URL
+function createImageElement(url) {
+	let img = document.createElement("img");
+	img.src = url;
+	img.width = 200;
+	img.height = "auto";
+	return img;
+}
