@@ -5,16 +5,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/ellomixO.png" type="image/png" size="16x16"> 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/index.css">
 	<title>ellomix</title>
 	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" href="css/index.css">
+
 </head>
+
 <body>
 
-	<div id="sound-toggle" class="sound-toggle">
+    <!-- Navigation -->
+       
+          <div class="nav">
+            <div class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="./blog/index.html">Blog</a>
+            </div>
+            
+        </div>
+<div id="sound-toggle" class="sound-toggle">
 		<p>sound is on</p>
 		<p style="display: none;">sound is off</p>
 	</div>
+	
 	
 	<div class="container content-container space-background" id="main">
 		<div class="row transparent-gradient">
@@ -34,9 +53,11 @@
             </div>
         </div>
         <div class="container content-container screenshot">
-        	<div id="feature-pic"></div>
             <div class="row mobile-margin-top">
                 <div class="app-demo">
+                    <div class=""></div>
+                    <!-- <img id="current-screen" src="images/Search.png" width="200" height="auto"> -->
+                    <!-- <img src="images/iphone7timeline.png" width="300" height="auto"> -->
                 </div>
                 <div class="col-md-3 col-md-offset-1 feature-items">
                     <div class="feature-item" data-screen="Timeline">
@@ -45,7 +66,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-md-offset-4 feature-items">
-                    <div class="feature-item" data-screen="Messages">
+                    <div class="feature-item" data-screen="Messaging">
                         <h4>Messaging</h4>
                         <p class="feature-desc">Users will have the ability to message privately to a single user or group chat. User can share music and write messages in this function.</p>
                     </div>
@@ -114,14 +135,4 @@
 	<script src="js/index.js"></script>
 	<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	<script src="https://lightwidget.com/widgets/lightwidget.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116043478-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-116043478-1');
-	</script>
-
 </body>

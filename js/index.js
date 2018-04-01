@@ -53,17 +53,16 @@ $(function() {
 
 	// Changes app screenshot based on hovered element
 	$('.feature-item').hover(function(e) {
-		console.log(e.target)
+		// console.log(e.target)
 		let url = 'url("images/' + $(this).attr('data-screen') + '.png")';
-		console.log(url);
+		console.log($(this).attr('data-screen'));
 		
-
-
-		$(this).css('background-color', 'rgba(0, 0, 0, .25')
-	}, function() {
-		let url = 'url(../images/iPhone 8 White.png)';
-        $('.screenshot').css('background-image', url);
-        $(this).css('background-color', 'transparent')
+		}, function() {
+		// let screen = $(this).attr('data-screen')
+		// console.log(screen)
+		// let path = `./images/iPhone 8 White.png`;
+  //       $('.screenshot').css('background-image', url);
+  //       $('#current-screen').src = screen
 	});
 });
 

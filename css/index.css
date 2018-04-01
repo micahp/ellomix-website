@@ -40,6 +40,35 @@ h1,h2,h3,h4,h5,h6 {
 	--gradientBottom: #bc2a8d;
 }
 
+.nav {
+	float: right;
+	background-color: transparent;
+	position: absolute;
+	right: 10%;
+	z-index: 111;
+}
+
+.nav > div {
+	display: inline;
+	float: left;
+}
+
+.nav-item {
+	padding: 15px 22px;
+}
+
+.nav-item > a {
+	color: white;		
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.nav-item > a:hover {
+	text-decoration: none;
+}
+
 .akzidenz {
 	font-family: AkzidenzGrotesk;
 }
@@ -47,7 +76,7 @@ h1,h2,h3,h4,h5,h6 {
 .app-demo {
 	text-align: center;
 	padding-bottom: 50px;
-	position: 'relative';
+	position: relative;
     width: 100%;
 
 }
@@ -151,9 +180,6 @@ h1,h2,h3,h4,h5,h6 {
   background: linear-gradient(var(--gradientTop3) 75px, var(--gradientBottom)); /* Standard syntax */
 }
 
-.feature {
-	background-color: #000;
-}
 
 .feature-item {
 	min-height: 255px;
@@ -389,6 +415,9 @@ h1,h2,h3,h4,h5,h6 {
 	.email-input {
 		font-weight: normal
 	}
+	.nav {
+	right: 20%;
+}
 }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
  }
