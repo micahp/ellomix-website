@@ -95,6 +95,7 @@ h1,h2,h3,h4,h5,h6 {
 .container {
 	width: 100%;
 	min-height: 100vh;
+	min-width: 300px;
 	padding-left: 0;
 	padding-right: 0;
 	position: relative;
@@ -418,6 +419,20 @@ h1,h2,h3,h4,h5,h6 {
 	.nav {
 	right: 20%;
 }
+
+@media (max-width: 600px) {
+	.nav {
+		right: 30%;
+	}
+
+	iframe {
+		width: 300px;
+	}
+
+	.space-background {
+		padding-top: 150px;
+	}
+
 }
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
  }
