@@ -30,6 +30,10 @@ h1,h2,h3,h4,h5,h6 {
 	src: url("../Berthold Akzidenz Grotesk BE Regular.otf");
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 :root {
 	--placeholderLight: #ffffff;
 	--placeholderDefault: #eaeaea;
@@ -143,6 +147,16 @@ h1,h2,h3,h4,h5,h6 {
 	border:0px solid white; 
 	font-weight: bold; 
 	text-transform: uppercase;
+	text-align: center;
+	min-width: 300px;
+}
+
+.email-input:focus {
+	border:0px solid white; 
+}
+
+.email-input::placeholder {
+	color: white;
 }
 
 .email-parent {
