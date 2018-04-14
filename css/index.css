@@ -21,6 +21,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @font-face {
+	font-family: FuturaMediumItalic;
+	src: url("../Futura-MediumItalic.ttf");
+}
+
+@font-face {
 	font-family: AkzidenzGroteskMedium;
 	src: url("../Akzidenz-Grotesk-BQ-Medium_2839.ttf");
 }
@@ -251,7 +256,8 @@ textarea:focus, input:focus{
 
 .logo {
 	font-size: 148px;
-	font-family: AkzidenzGrotesk;
+	font-weight: normal;
+	font-family: FuturaMediumItalic;
 }
 
 
@@ -260,7 +266,7 @@ textarea:focus, input:focus{
 }
 
 .logo-column h1 {
-	font-family: AkzidenzGrotesk;
+	font-family: FuturaMediumItalic;
 	font-weight: normal;
 }
 
